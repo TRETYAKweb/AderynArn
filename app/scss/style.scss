@@ -3,189 +3,60 @@
 @import "fonts";
 @import "global";
 
-.header {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  color: #ffffff;
-  height: 100vh;
-  padding: 30px 0 50px;
+@import "components/header";
 
+.about-us {
+  background-image: url("../images/birdie.svg");
+  background-repeat: no-repeat;
+  background-position: right 150px;
+
+  &__img {
+    margin-right: 30px;
+  }
   &__inner {
     display: flex;
-    flex-direction: column;
-    height: calc(100vh - 95px);
     justify-content: space-between;
   }
 
   &__title {
-    font-family: "SovMod", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    text-transform: uppercase;
-    font-size: $font-size-h1;
-    line-height: 1;
-    margin-bottom: 10px;
-  }
-
-  &__desc {
-    font-size: 16px;
-    line-height: 19px;
     margin-bottom: 50px;
   }
 
-  &__scroll-down {
-    max-width: 114px;
-    transform: rotate(270deg);
-    margin-left: auto;
-    font-size: 15px;
-    line-height: 2;
-    letter-spacing: 0.05em;
-    opacity: 0.5;
-    padding-left: 29px;
-    position: relative;
-    z-index: 1;
-    &::after {
-      content: "";
-      position: absolute;
-      width: 21px;
-      height: 7px;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background-image: url("../images/icons/arrow.svg");
-      background-repeat: no-repeat;
-      transition: transform 0.3s ease-in-out;
-    }
-    &:hover::after {
-      transform: translate(-10px, -50%);
-    }
-    &:hover {
-      text-decoration: underline;
-    }
+  &__text {
+    max-width: 565px;
+    width: 100%;
+    margin-bottom: 65px;
   }
+
 }
 
-.logo {
-  transition: opacity 0.3s ease-in-out;
-  &:hover {
-    opacity: 0.7;
-  }
+.about-us__text p:not(:last-child) {
+  margin-bottom: 40px;
 }
+.about-us__photo {
+  max-width: 350px;
+  width: 100%;
+  margin-left: auto;
+  position: relative;
 
-.main-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.social-networks {
-  display: flex;
-
-  & li:not(:last-child) {
-    margin-right: 50px;
-  }
-
-  & li {
-    transition: color 0.3s ease-in-out;
-  }
-  & li:hover {
-    color: $accent;
-    text-decoration: underline;
-  }
-}
-
-.clouse-btn {
-  width: 33px;
-  height: 33px;
-  background-color: transparent;
-  position: absolute;
-  right: 100px;
-  top: 50px;
-  cursor: pointer;
-  &::after,
-  &::before {
-    content: "";
-    top: 15px;
-    left: -5px;
-    right: 0;
-    bottom: 0;
+  & svg {
     position: absolute;
-    width: 43px;
-    height: 2px;
-    background-color: $white;
-    // transform-origin: left;
-  }
-
-  &::after {
-    transform: rotate(-45deg);
-  }
-  &::before {
-    transform: rotate(45deg);
+    bottom: -75px;
+    left: -75px;
   }
 }
 
-.menu-btn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  row-gap: 7px;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  & span {
-    width: 35px;
-    height: 2px;
-    background-color: #fff;
+.aderynart__icon {
+    animation: rotate 10s linear 0s infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform:rotate(0deg);
   }
-}
-
-.menu {
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(24px);
-  position: absolute;
-  top: 0px;
-  left: -100%;
-  right: 0;
-  width: 100%;
-  z-index: 2;
-  transition: all 0.5s ease-in-out;
-  &__list {
-    padding-top: 200px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
+  to {
+    transform:rotate(360deg);
   }
-}
-
-.menu.active {
-  left: 0;
-}
-
-.menu__list ul {
-  max-width: 535px;
-  width: 100%;
-  text-transform: uppercase;
-}
-
-.menu__list li:not(:last-child) {
-  margin-bottom: 50px;
-}
-
-.menu__list a {
-  font-family: "SovMod", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 60px;
-  line-height: 70px;
-  transition: color 0.3s ease-in-out;
-  &:hover {
-    color: $accent;
-  }
-}
-
-.menu ul:not(:last-child) {
-  margin-right: 150px;
 }
 
 @import "media";
