@@ -1,0 +1,58 @@
+// .photographer-animate {
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   width: 100%;
+//   height: 33px;
+//   animation: 3s linear 1s infinite running slidein;
+// }
+
+// /* @keyframes duration | easing-function | delay |
+// iteration-count | direction | fill-mode | play-state | name */
+// animation: 3s ease-in 1s 2 reverse both paused slidein;
+
+// /* @keyframes name | duration | easing-function | delay */
+// animation: slidein 3s linear 1s;
+
+// /* @keyframes name | duration */
+// animation: slidein 3s;
+
+.photographer {
+  background-size: cover;
+  height: 50px;
+  width: 100%;
+  padding-left: 100%;
+  -webkit-animation: scroll 15s infinite linear;
+  -moz-animation: scroll 15s infinite linear;
+  animation: scroll 15s infinite linear;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+}
+
+@-moz-keyframes scroll {
+  0% {
+    -moz-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  100% {
+    -moz-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}

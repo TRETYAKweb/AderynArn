@@ -4,58 +4,40 @@
 @import "global";
 
 @import "components/header";
+@import "components/about-us";
+@import "components/photographer";
 
-.about-us {
-  background-image: url("../images/birdie.svg");
+.section-header {
+  height: 260px;
   background-repeat: no-repeat;
-  background-position: right 150px;
+  background-size: 50%;
+  background-position: right center;
+  margin-bottom: 100px;
 
-  &__img {
-    margin-right: 30px;
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
   }
-  &__inner {
+
+  &__title {
+    max-width: 460px;
+  }
+}
+
+.section-footer {
+  &__items {
     display: flex;
     justify-content: space-between;
   }
 
+  &__item {
+    max-width: 270px;
+  }
+
   &__title {
-    margin-bottom: 50px;
-  }
-
-  &__text {
-    max-width: 565px;
-    width: 100%;
-    margin-bottom: 65px;
-  }
-
-}
-
-.about-us__text p:not(:last-child) {
-  margin-bottom: 40px;
-}
-.about-us__photo {
-  max-width: 350px;
-  width: 100%;
-  margin-left: auto;
-  position: relative;
-
-  & svg {
-    position: absolute;
-    bottom: -75px;
-    left: -75px;
-  }
-}
-
-.aderynart__icon {
-    animation: rotate 10s linear 0s infinite;
-}
-
-@keyframes rotate {
-  from {
-    transform:rotate(0deg);
-  }
-  to {
-    transform:rotate(360deg);
+    font-size: $font-size-h5;
+    margin-bottom: 25px;
   }
 }
 
