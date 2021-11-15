@@ -1,0 +1,43 @@
+.section-header {
+  height: 260px;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: right center;
+  margin-bottom: 100px;
+
+  &__container {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__title {
+    max-width: 460px;
+  }
+
+  &--revers {
+    background-position: left center;
+    margin-bottom: 170px;
+  }
+
+  &__container--revers {
+    justify-content: flex-end;
+    text-align: right;
+  }
+}
+
+.section-footer {
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 270px;
+  }
+
+  &__title {
+    font-size: $font-size-h5;
+    margin-bottom: 25px;
+  }
+}

@@ -2,43 +2,64 @@
 @import "vars";
 @import "fonts";
 @import "global";
+@import "vendor";
 
 @import "components/header";
 @import "components/about-us";
 @import "components/photographer";
+@import "components/section";
 
-.section-header {
-  height: 260px;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: right center;
-  margin-bottom: 100px;
-
-  &__container {
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-  }
-
-  &__title {
-    max-width: 460px;
-  }
-}
-
-.section-footer {
-  &__items {
-    display: flex;
-    justify-content: space-between;
-  }
-
+.reviews {
   &__item {
-    max-width: 270px;
+    padding: 30px;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 75px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__avatar {
+    margin-right: 20px;
+    border-radius: 50%;
   }
 
   &__title {
     font-size: $font-size-h5;
-    margin-bottom: 25px;
+  }
+
+  &__text {
+    max-width: 290px;
   }
 }
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  font-size: 0;
+  height: 5px;
+  & li:not(:last-child) {
+    margin-right: 15px;
+  }
+  & li button {
+    width: 35px;
+    height: 5px;
+    border-radius: 2.5px;
+    border: none;
+    background-color: #d3d3d3;
+  }
+
+  & .slick-active button {
+    background-color: $accent;
+  }
+}
+
+
+
+
 
 @import "media";
