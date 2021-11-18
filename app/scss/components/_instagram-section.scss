@@ -1,0 +1,40 @@
+.instagram-section {
+  background-image: url("../images/birdie.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+
+  &__top {
+    margin-bottom: 75px;
+  }
+
+  &__title {
+    max-width: 690px;
+  }
+
+  &__link {
+    font-family: "SovMod", sans-serif;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+
+    font-size: 15px;
+    line-height: 1;
+
+    color: #6d6e6b;
+
+    opacity: 0.75;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    column-count: 4;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+
+  &__wrap {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+}
